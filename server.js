@@ -13,28 +13,28 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-// var con = mysql.createConnection({
-//     host: "localhost",
-//     user: "root",
-//     password: "password",
-//     database: "studiviaDB"
-// })
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "studiviaDB"
+})
 
-// con.connect(function(err){
-//     if(err)throw err;
-//     console.log("connected!");
-// })
+con.connect(function(err){
+    if(err)throw err;
+    console.log("connected!");
+})
 
 app.listen(8000, () => {
     console.log('server started yes')
 })
 
 app.get('/',(req,res)=>{
-    // let sql = "SELECT username FROM userledger"
-    // con.query(sql,(err,users)=>{
-    //     if(err) throw err;
-    //     console.log("users",users);
-    // })
-    res.render("index")
-    // ,{usersHtml : users}
+    let sql = "SELECT username FROM userledger"
+    con.query(sql,(err,users)=>{
+        if(err) throw err;
+        console.log("users",users);
+    })
+    res.render("index",{usersHtml : users})
+    
 })
