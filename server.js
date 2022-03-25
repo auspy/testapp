@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({
 //     console.log("connected!");
 // })
 
-app.listen(3300, () => {
+app.listen(8000, () => {
     console.log('server started yes')
 })
 
