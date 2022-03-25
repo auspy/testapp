@@ -13,17 +13,17 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
-    database: "studiviaDB"
-})
+// var con = mysql.createConnection({
+//     host: "localhost",
+//     user: "root",
+//     password: "password",
+//     database: "studiviaDB"
+// })
 
-con.connect(function(err){
-    if(err)throw err;
-    console.log("connected!");
-})
+// con.connect(function(err){
+//     if(err)throw err;
+//     console.log("connected!");
+// })
 
 app.listen(3300, () => {
     console.log('server started yes')
