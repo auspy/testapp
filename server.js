@@ -30,10 +30,11 @@ app.listen(3300, () => {
 })
 
 app.get('/',(req,res)=>{
-    let sql = "SELECT username FROM userledger"
-    con.query(sql,(err,users)=>{
-        if(err) throw err;
-        console.log("users",users);
-        res.render("index",{usersHtml : users})
-    })
+    // let sql = "SELECT username FROM userledger"
+    // con.query(sql,(err,users)=>{
+    //     if(err) throw err;
+    //     console.log("users",users);
+    // })
+    res.render("index")
+    // ,{usersHtml : users}
 })
