@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test App</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Users</h1>
+    <% usersHtml.forEach((item)=>{ %>
+        <h3 style="color: black;"><%= item.username %> </h3>
+<%}) %> 
+</body>
+</html>
