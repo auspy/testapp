@@ -31,7 +31,7 @@ app.listen(8000, () => {
 })
 
 app.get('/',(req,res)=>{
-    let sql = "SELECT username FROM userledger"
+    let sql = "SELECT username FROM userLedger"
     con.query(sql,(err,users)=>{
         if(err) throw err;
         console.log("users",users);
