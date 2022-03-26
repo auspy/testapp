@@ -26,7 +26,7 @@ con.connect(function(err){
     console.log("connected!");
 })
 
-app.listen(8000, () => {
+app.listen(8400, () => {
     console.log('server started yes')
 })
 
