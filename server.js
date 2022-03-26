@@ -14,8 +14,9 @@ app.use(bodyParser.urlencoded({
 }))
 
 var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
+    host: "studiviadb.cnreudh8065g.ap-south-1.rds.amazonaws.com",
+    port: "3306",
+    user: "auspy",
     password: "password",
     database: "studiviaDB"
 })
