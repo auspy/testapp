@@ -35,7 +35,7 @@ app.get('/',(req,res)=>{
     con.query(sql,(err,users)=>{
         if(err) throw err;
         console.log("users",users);
+        res.render("index",{usersHtml : users})
     })
-    res.render("index",{usersHtml : users})
     
 })
